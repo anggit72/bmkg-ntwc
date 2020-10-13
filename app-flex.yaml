@@ -1,0 +1,5 @@
+runtime: php
+env: flex
+service: ntwc
+runtime_config:
+    document_root: .

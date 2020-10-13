@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+.card2 {
+  margin: 0 auto;
+  margin-top: 0px;
+  background: white;
+  width: 350px;
+  box-shadow: 0px 6px 18px 0px hsla(0, 0%, 0%, 0.2);
+  padding: 2px 0px 0px 0px;
+  color: #35383f;
+  border-radius: 0px;
+}
+
+.card2 > * {
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.card2 h3 {
+  color: #35383f; 
+  margin-left: 16px;
+}
+
+
+.card2 input {
+  width: 91%;
+  background: #f1f5f8;
+  outline: none;
+  border: 0;
+  padding: 9px;
+  border-radius: 5px;
+  margin-top: 2px;
+  margin-left: 7px;
+  margin-right: 7px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #9ca0a6;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #9ca0a6;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #9ca0a6;
+}
+
+.team {
+  margin-top: 15px;
+}
+
+.member2 {
+  
+  padding: 8px 12px;
+  margin-bottom: 8px;
+}
+
+.member {
+  
+  padding: 8px 12px;
+  margin-bottom: 8px;
+}
+
+.member:hover {
+  background: #ecf3fb;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.member > * {
+  display: inline-block;
+}
+
+.status {
+  width: 7px;
+  height: 7px;
+  background: #cad0d6;
+  border-radius: 7px;
+  margin-right: 10px;
+}
+
+.online {
+  background: #27ae60;
+}
+
+.name {
+  color: #2e3038;
+}
+
+.membership {
+  float: right;
+  color: #949aa4;
+}
+
+.action {
+  margin:0;
+  margin-top: 15px;
+  background: #f1f5f8;
+  padding: 15px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.action > * {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.link-btn {
+  border: 0;
+  outline: none;
+  background: none;
+  color: #34495e;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.btn {
+  border: 0;
+  outline: none;
+  text-transform: capitalize;
+  background: #2675be;
+  padding: 10px;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.btn:hover, .link-btn:hover {
+  cursor: pointer;
+}

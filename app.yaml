@@ -1,0 +1,96 @@
+runtime: php55
+service: ntwc
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /(.*\.(jpg|png|gif))
+  static_files: /\1
+  upload: /.*\.(jpg$|png$|gif$)
+  
+- url: /images/(.*\.(jpg|png|gif))
+  static_files: images/\1
+  upload: images/.*\.(jpg$|png$|gif$)
+
+- url: /images/screenshot/(.*\.(jpg|png|gif))
+  static_files: images/screenshot/\1
+  upload: images/screenshot/.*\.(jpg$|png$|gif$)
+
+- url: /dist/img/(.*\.(jpg|png|gif))
+  static_files: dist/img/\1
+  upload: dist/img/.*\.(jpg$|png$|gif$)
+
+- url: /img_mmi/(.*\.(jpg|png|gif))
+  static_files: img_mmi/\1
+  upload: img_mmi/.*\.(jpg$|png$|gif$)
+
+- url: /sound/(.*\.(mp3))
+  static_files: sound/\1
+  upload: sound/.*\.(mp3$)
+
+- url: /sound/cd/(.*\.(mp3))
+  static_files: sound/cd/\1
+  upload: sound/cd/.*\.(mp3$)
+
+- url: /file_modal/(.*\.(html|png))
+  static_files: file_modal/\1
+  upload: file_modal/.*\.(html$|png$)
+
+- url: /file_modal/(.*\.(html|png))
+  static_files: file_modal/\1
+  upload: file_modal/.*\.(html$|png$)
+  
+- url: /assets_signin
+  static_dir: assets_signin
+
+- url: /assets_signin/js
+  static_dir: assets_signin/js
+
+- url: /assets_signin/plugins
+  static_dir: assets_signin/plugins
+
+- url: /assets_signin/plugins/jquery-validation
+  static_dir: assets_signin/plugins/jquery-validation
+  
+- url: /assets_signin/plugins/node-waves
+  static_dir: assets_signin/plugins/node-waves
+
+- url: /assets_signin/plugins/bootstrap/css
+  static_dir: assets_signin/plugins/bootstrap/css
+  
+- url: /assets_signin/plugins/bootstrap/js
+  static_dir: assets_signin/plugins/bootstrap/js
+  
+- url: /assets_signin/plugins/jquery
+  static_dir: assets_signin/plugins/jquery
+  
+- url: /assets_signin/js/pages/examples
+  static_dir: assets_signin/js/pages/examples
+
+- url: /assets_signin/css
+  static_dir: assets_signin/css
+
+- url: /assets_signin/plugins/animate-css
+  static_dir: assets_signin/plugins/animate-css
+
+- url: /file_modal
+  static_dir: file_modal
+
+- url: /file_modal/assets_mmi
+  static_dir: file_modal/assets_mmi
+  
+- url: /ceklogin.php
+  script: ceklogin.php
+  
+- url: /active_users.php
+  script: active_users.php
+
+- url: /index.php
+  script: index.php
+  
+- url: /login.php
+  script: login.php
+  
+- url: /.*
+  script: index.php
+  

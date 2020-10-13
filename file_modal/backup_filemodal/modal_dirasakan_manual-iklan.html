@@ -1,0 +1,345 @@
+
+
+<style>
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.title{
+  margin-top: 50px;
+  h1{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    text-transform: uppercase;
+    color: #d63031;
+    
+    span{
+      display: block;
+      color: darken(#d63031, 40%);
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+  }
+}
+table { 
+	width: 750px; 
+	border-collapse: collapse; 
+	margin:50px auto;
+	}
+
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+	background: #eee; 
+	}
+
+th { 
+	background: #3498db; 
+	color: white; 
+	font-weight: bold; 
+	}
+
+td, th { 
+	padding: 0px; 
+	border: 1px solid #ccc; 
+	text-align: left; 
+	font-size: 5px;
+	}
+
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	table { 
+	  	width: 100%; 
+	}
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+			
+	}
+
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+		/* Label the data */
+		content: attr(data-column);
+
+		color: #000;
+		font-weight: bold;
+	}
+
+}
+</style>
+<div class="row" style="margin: 0 0 0 0; background-color:white;">
+  
+ <div class="col-md-2" style="margin: 0 0 0 0; padding: 0 0 0 0; background-color:#bd2109;">
+  <div class="card-block">
+            <h1  id="magni9" style="margin: 0 10px 0px 10px; font-size:480%; font-weight: bold; color:white; text-align:center"></h1>
+				<p align="center" style="margin: 0px 10px 0px 10px; font-size:100%; color:white; text-align:center"> Magnitudo</p>
+  </div>
+  </div>
+  <div class="col-md-10" style="margin: 0 0 0 0; padding: 0 0 0 10px; background-color:#f0c22e;">
+        <div class="card-block">
+           <h4 class="card-title" align="left" style="margin-bottom:0px; font-family: 'Helvetica Neue', sans-serif;  font-weight: bold; font-size:250%; text-transform:uppercase;  margin-bottom:0px;" id="judul29"></h4>
+            <p class="card-text" id= "tanggal29" style="font-size:150%; margin-bottom:0px; margin-top:-10px; "></p>
+			<p class="card-text" id= "timelapse29" style="font-size:120%; color:#a61c07; margin-bottom:0px;"></p>
+         </div>
+       
+    </div>
+	<div  class="col-md-12" style=" background-color:none; position: absolute; float:right!important; z-index: 500;">
+		 <div class="q">
+	 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+    <img src="https://cdn.bmkg.go.id/Web/Logo-BMKG-new.png" align="right" style="z-index: 500; margin-top:-60px; margin-right:0px;   position: relative;    width:8%;    display: block; "/>
+</div>
+	 </div>
+	 
+  
+    <div  class="col-md-4" style="margin: 5px 0 5px 0px; padding: 0px 0 0px 0px;">
+<div  class="container" style="margin: 5px 0 5px 0px; padding: 0px 0 0px 0px;">
+	<div  class="row" style="margin: 5px 0 5px 0px; padding: 0px 0 0px 0px;">
+    <div class="container-fostrap" style=" width:100%; margin: 10px 0 5px 0px; padding: 0px 0 0px 0px;" >
+      
+        <div class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12">
+					
+                        <div class="card" style="padding-top:-30px;">
+										
+                            <a id= "evid9" class="img-card2"  href="#">
+                           
+                          </a>
+                            <div class="card-content" style="margin-top:50px; background-color:#8a190a; padding: 15px 0 15px 0;">
+                                
+                                <p align="center" id="potensi9" style="font-size:90%; color:white; text-transform:uppercase; margin-top:10px; margin-bottom:10px;">
+                                </p>
+                            </div>
+                        </div>
+						
+						
+						
+                    </div>
+					</div>
+					</div>
+					</div>
+					</div>
+	</div>
+		</div>
+
+
+    </div>
+
+    <div class="col-md-8" style="margin: 0 0 0 0; padding: 5px 5px 5px 0px;">
+	<p class="card-text" style="font-size:100%; color:black; margin-bottom:0px; margin-top:10px;"> Daerah yang merasakan getaran gempabumi dalam skala MMI :</p>
+	
+    <div class="col-xs-12 alert alert-warning" style="margin-bottom:0px; background-color:#e2ed45; ">
+            <div class="glyphicon glyphicon-exclamation-sign" > <i class="fas fa-home "></i></div>
+            <div><p style="color:black; margin-bottom:0px;" id="mmi"></p></div> 
+		</div>
+	
+  
+		
+		<div class="col-md-12" style="margin:0 0 0 0; padding:0 0 0 0;">
+
+ <p class="card-text" style="font-size:100%; color:black; margin-bottom:0px; margin-top:0px;"> Saran dan Arahan Status Peringatan :</p>
+<!--Carousel Gallery-->
+     <div class="col-xs-12 alert alert-warning" style="margin-top:10px; background-color:orange; ">
+            <div class="glyphicon glyphicon-exclamation-sign" > <i class="fas fa-bullhorn "></i></div>
+            <div><p style="color:black; margin-bottom:0px;" id="instruction19"></p></div> 
+		</div>
+ 
+     	</div>
+		<style>
+		.card-image{
+    height:100px;
+    overflow:hidden;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+  }
+  .card-header{
+    padding: 15px 15px 0 10px;
+    h2{
+      margin:0;
+      font-weight:400;
+      font-size:21px;
+      color:#666;
+      small{
+        display:block;
+        font-size:13px;
+        font-weight:300;
+        padding:5px 0;
+        color:#aaa;
+      }
+    }
+  }
+		.card-body{
+    padding: 15px 10px;
+    p{
+      font-size:16px;
+      font-weight:300;
+      color:#6b6b6b;
+      margin:0;
+    }
+  }
+  .card-rating{
+    .fa-star{
+      color:#FFD700;
+      &.fill{
+        color:#FFD700;
+      }
+    }
+  }
+  .checked {
+  color: orange;
+}
+  .card-footer{
+    padding:15px 10px;
+    font-size:13px;
+    font-weight:300;
+    color:#767;
+    border-top:1px solid #f1f1f1;
+    .card-footer-left,
+    .card-footer-right{
+      float:left;
+      width:50%;
+    }
+    .card-footer-right{
+      text-align:right;
+    }
+  }
+}
+		</style>
+		
+	<div class="col-md-12" style="margin:0 0 0 0; padding:0 0 0 0;">
+	<div class="row">
+ <div class="col-md-4 col-lg-4">
+      <div class="card">
+        <div class="card-image" style="background-image: url(https://is3-ssl.mzstatic.com/image/thumb/Purple128/v4/93/2a/35/932a35da-dc5c-6806-6a2c-908032dd95ca/AppIcon-0-1x_U007emarketing-0-0-85-220-10.png/246x0w.png);"></div>
+        <div class="card-header">
+          <h6>WRS-BMKG <small>Aplikasi Mobile Android</small></h6></div>
+        <div class="card-body">
+          <p style="margin-bottom:0px; font-size:90%;">
+           Aplikasi Warning Receiver System Informasi Gempabumi dan Tsunami.
+          </p>
+        </div>
+        <div class="card-footer clearfix">
+          <div class="card-footer-left">
+            <i class="fa fa-user"></i> 100 rb+ Download
+          </div>
+          <div class="card-footer-right">
+            <div class="card-rating">
+              <i class="fa fa-star checked"></i>
+              <i class="fa fa-star checked"></i>
+              <i class="fa fa-star checked"></i>
+              <i class="fa fa-star checked"></i>
+              <i class="fa fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+	
+	 <div class="col-md-4 col-lg-4">
+      <div class="card">
+        <div class="card-image" style="background-image: url(https://is3-ssl.mzstatic.com/image/thumb/Purple128/v4/93/2a/35/932a35da-dc5c-6806-6a2c-908032dd95ca/AppIcon-0-1x_U007emarketing-0-0-85-220-10.png/246x0w.png);"></div>
+        <div class="card-header">
+          <h6>Info BMKG <small>Aplikasi Mobile Android</small></h6></div>
+        <div class="card-body" style="margin-bottom:0px;">
+          <p style="margin-bottom:0px; font-size:90%;">
+           Aplikasi informasi Meterorologi, KLimatologi dan Geofisika dari BMKG
+          </p>
+        </div>
+        <div class="card-footer clearfix">
+          <div class="card-footer-left">
+            <i class="fa fa-user"></i> 5 Jt+ Download
+          </div>
+          <div class="card-footer-right">
+            <div class="card-rating">
+              <i class="fa fa-star checked"></i>
+              <i class="fa fa-star checked"></i>
+              <i class="fa fa-star checked"></i>
+              <i class="fa fa-star checked"></i>
+              <i class="fa fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+	
+</div>	
+		
+		
+		 	</div>
+		</div>
+		 
+	
+        <script>
+		async function getGempa2() { 
+	  var timestamp = +new Date;
+//alert("Hello! I am an alert box!");
+      const api_url = 'http://172.19.3.53/display/datagempa/datagempa.json?t=' + timestamp;
+		
+	  //LOAD GEMPA
+        const response = await fetch(api_url);
+        const data5 = await response.json();
+		console.log(data5);
+	    const { latitude, longitude, info, OT, depth, ket, identifier, sent, magnitude } = data5;
+		
+		var judul_rs = info.subject;
+		var pecah_judul_rs = judul_rs.split(" ");
+		var judul_rasa = pecah_judul_rs[1] +" " +pecah_judul_rs[2];
+		document.getElementById('magni9').innerText = info.magnitude;
+		document.getElementById('judul29').innerText = "INFO " + judul_rasa;
+		document.getElementById('tanggal29').innerHTML = "WAKTU GEMPABUMI : " + info.date + " " + info.time;
+		document.getElementById('timelapse29').innerHTML = "Waktu pengiriman : " + info.timesent;
+		document.getElementById('instruction19').innerHTML = info.instruction;
+		document.getElementById('potensi9').innerHTML = info.potential;
+		document.getElementById('evid9').innerHTML = "<img src='https://bmkg-content-inatews.storage.googleapis.com/"+ info.shakemap +"' width='10%; border:1;'>";
+		document.getElementById('mmi').innerHTML = info.felt;
+		               
+      
+	}
+   getGempa2();
+	
+  
+
+
+  
+		</script>
+
+  </div>

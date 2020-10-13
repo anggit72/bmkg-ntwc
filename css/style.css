@@ -1,0 +1,233 @@
+/* set map, body, and html to 100% of the screen size */
+#map-id,
+body,
+html {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+.fade {
+  transition-duration: 1s;
+}
+.legend {
+  line-height: 18px;
+  color: "black";
+  background-color: white;
+}
+
+.legend i {
+  width: 30px;
+  height: 10px;
+  float: left;
+  margin-right: 5px;
+  margin-left: 5px;
+  opacity: 0.8;
+}
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background-color: #fff;
+}
+.preloader .loading {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  font: 14px arial;
+}
+
+.Box{
+	position:relative;
+	display:flex;
+}
+.Box span{
+	width:10px;
+	height:10px;
+	border-radius:50%;
+	margin:20px;
+	animation:Loading 1.6s ease-in-out infinite;
+	transform-style:preserve-3d;
+	transform-origin:center;
+}
+.Box span:first-of-type{
+	background-color:#eb3b5a;
+	animation-delay:0s;
+	box-shadow:0px 0px 10px #eb3b5a;
+}
+.Box span:nth-of-type(2){
+	background-color:#2d98da;
+	animation-delay:.2s;
+	box-shadow:0px 0px 10px #2d98da;
+}
+.Box span:nth-of-type(3){
+	background-color:#f7b731;
+	animation-delay:.4s;
+	box-shadow:0px 0px 10px #f7b731;
+}
+.Box span:nth-of-type(4){
+	background-color:#218c74;
+	animation-delay:.6s;
+	box-shadow:0px 0px 10px #218c74;
+}
+.Box span:nth-of-type(5){
+	background-color:#474787;
+	animation-delay:.8s;
+	box-shadow:0px 0px 10px #474787;
+}
+.Box span:last-of-type{
+	background-color:#fa8231;
+	animation-delay:1s;
+	box-shadow:0px 0px 10px #fa8231;
+}
+
+@keyframes Loading{
+	
+	0%, 40%, 100%{
+		transform:scale(1);	
+	}
+	20%{
+		transform:scale(5);	
+	}
+
+} 
+
+
+.alert div,
+.alert span{
+    padding-left: 5px;
+    display:table-cell;
+}
+.good-review-score{
+    background-color:#bd2109;
+    color:white;
+    text-align: center;
+    padding: 10px 10px 0px 10px;
+    margin-right: 5px
+/*width: 20px;
+    height: 10px; 
+    line-height: 30px*/
+}
+
+.good-review-score2{
+    background-color:#1fb0b8;
+    color:white;
+    text-align: center;
+    padding: 10px 10px 0px 10px;
+    margin-right: 5px
+/*width: 20px;
+    height: 10px; 
+    line-height: 30px*/
+}
+.csstoast {
+  color: black;
+}
+
+	 
+@keyframes blink{
+0%{opacity: 0;}
+50%{opacity: .5;}
+100%{opacity: 1;}
+}
+
+ .info
+  {
+        padding: 6px 8px;
+        font: 13px/16px Verdana, Geneva, sans-serif;
+        background: white;
+        background: rgba(255,255,255,0.8);
+        box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        border-radius: 10px;
+    }
+
+   .legend {
+        line-height: 25px;
+        padding:7px;
+        color: #555;
+		background-color: rgba(255, 255, 255, 0);
+       }
+
+   .legend i {
+        width: 15px;
+        height: 15px;
+        float: left;
+        margin-right: 0px;
+		background-color:black;
+        opacity: 0.7;
+      }
+
+    .circle
+ {
+float: left;
+border: 1px solid #222;
+border-radius: 50%;
+ }
+
+ .legend .colorcircle {
+border-radius: 50%;
+width: 15px;
+height: 15px;
+margin-top: 0px;
+ }
+.legend .circlepadding {
+border-radius: 50%;
+background: rgba(255, 255, 255, 0.85);
+}
+
+
+.foo {
+  float: left;
+  width: 15px;
+  height: 15px;
+  margin: 5px 5px 20px 5px;
+  border: 1px solid rgba(0, 0, 0, .2);
+}
+
+.red {
+  background: red;
+}
+
+.orange {
+  background: orange;
+}
+
+.yellow {
+  background: yellow;
+}
+.green {
+  background: green;
+}
+.blue {
+  background: blue;
+}
+
+.pcir{
+margin-bottom:0px;
+}
+div.fill {
+    position:relative;
+    border:1px dashed red;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden
+}
+div.fill img {
+    flex-shrink:0;
+    min-width:100%;
+    min-height:100%
+}
+
+   #frameScale { width: 300px; height:200px; padding: 0; position:absolute; left:-0px; top:0px; margin-bottom:-100px; }
+    #frame { width: 500px; height: 430px; position:relative; left:0px; top:0px margin-bottom:-100px; } 
+    #frame { -ms-zoom: 0.4; -moz-transform: scale(0.2); -moz-transform-origin: 0px 0; -o-transform: scale(0.2); -o-transform-origin: 0 0; -webkit-transform: scale(0.6); -webkit-transform-origin: 0 0; margin-bottom:-180px;}
+@keyframes fade { 
+  from { opacity: 10%; } 
+}
+
+.blinking {
+  animation: fade 1s infinite alternate;
+}

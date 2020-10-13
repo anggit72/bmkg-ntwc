@@ -1,0 +1,243 @@
+
+
+<style>
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.title{
+  margin-top: 50px;
+  h1{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    text-transform: uppercase;
+    color: #d63031;
+
+    span{
+      display: block;
+      color: darken(#d63031, 40%);
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+  }
+}
+table {
+	width: 750px;
+	border-collapse: collapse;
+	margin:50px auto;
+	}
+
+/* Zebra striping */
+tr:nth-of-type(odd) {
+	background: #eee;
+	}
+
+th {
+	background: #3498db;
+	color: white;
+	font-weight: bold;
+	}
+
+td, th {
+	padding: 0px;
+	border: 1px solid #ccc;
+	text-align: left;
+	font-size: 5px;
+	}
+
+/*
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	table {
+	  	width: 100%;
+	}
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr {
+		display: block;
+	}
+
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+
+	tr { border: 1px solid #ccc; }
+
+	td {
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee;
+		position: relative;
+
+	}
+
+	td:before {
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%;
+		padding-right: 10px;
+		white-space: nowrap;
+		/* Label the data */
+		content: attr(data-column);
+
+		color: #000;
+		font-weight: bold;
+	}
+
+}
+</style>
+<div class="row" style="margin: 0 0 0 0; background-color:white;">
+
+ <div class="col-md-2" style="margin: 0 0 0 0; padding: 0 0 0 0; background-color:#bd2109;">
+  <div class="card-block">
+            <h1  id="magni9" style="margin: 0 10px 0px 10px; font-size:480%; font-weight: bold; color:white; text-align:center"></h1>
+				<p align="center" style="margin: 0px 10px 0px 10px; font-size:100%; color:white; text-align:center"> Magnitudo</p>
+  </div>
+  </div>
+  <div class="col-md-10" style="margin: 0 0 0 0; padding: 0 0 0 10px; background-color:#f0c22e;">
+        <div class="card-block">
+           <h4 class="card-title" align="left" style="margin-bottom:0px; font-family: 'Helvetica Neue', sans-serif;  font-weight: bold; font-size:250%; text-transform:uppercase;  margin-bottom:0px;" id="judul29"></h4>
+            <p class="card-text" id= "tanggal29" style="font-size:150%; margin-bottom:0px; margin-top:-10px; "></p>
+			<p class="card-text" id= "timelapse29" style="font-size:120%; color:#a61c07; margin-bottom:0px;"></p>
+         </div>
+
+    </div>
+	<div  class="col-md-12" style=" background-color:none; position: absolute; float:right!important; z-index: 500;">
+		 <div class="q">
+	 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+    <img src="../file_modal/Logo-BMKG-new.png" align="right" style="z-index: 500; margin-top:10px; margin-right:0px;   position: relative;    width:8%;    display: block; "/>
+</div>
+	 </div>
+
+
+    <div  class="col-md-4" style="margin: 5px 0 5px 0px; padding: 0px 0 0px 0px;">
+<div  class="container" style="margin: 5px 0 5px 0px; padding: 0px 0 0px 0px;">
+	<div  class="row" style="margin: 5px 0 5px 0px; padding: 0px 0 0px 0px;">
+    <div class="container-fostrap" style=" width:100%; margin: 10px 0 5px 0px; padding: 0px 0 0px 0px;" >
+
+        <div class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12">
+
+                        <div class="card" style="padding-top:-30px;">
+
+                            <a id= "evid9" class="img-card2"  href="#">
+
+                          </a>
+
+                        </div>
+
+
+
+                    </div>
+					</div>
+					</div>
+					</div>
+					</div>
+	</div>
+		</div>
+
+
+    </div>
+
+    <div class="col-md-8" style="margin: 0 0 0 0; padding: 5px 25px 5px 0px;">
+	<p class="card-text" style="font-size:100%; color:black; margin-bottom:0px; margin-top:10px;"> Daerah yang merasakan getaran gempabumi dalam skala MMI :</p>
+
+    <div class="col-xs-12 alert alert-warning" style="margin-bottom:0px; background-color:#e2ed45; ">
+            <div  > <i class="fas fa-home "></i></div>
+            <div><p style="color:black; margin-bottom:0px;" id="mmi"></p></div>
+		</div>
+
+
+
+		<div class="col-md-12" style="margin:0 0 0 0; padding:0 0 0 0;">
+
+
+		<p class="card-text" style="font-size:100%; color:black; margin-bottom:0px; margin-top:10px;"> Parameter Gempabumi :</p>
+		<div class="col-xs-12 alert alert-warning" style="margin-top:0px; background-color:#f0faaf; ">
+            <div  > <span style='color: orange;'><i class='fas fa-bullseye'></i> <font  color="black">Lokasi </font></span></div>
+            <div><p style="color:black; margin-bottom:0px;" id="latlon">loading..</p></div> </br>
+			<div  > <span style='color: green;'><i class='fas fa-podcast'></i> <font  color="black">Kedalaman </font></span></div>
+			<div><p style="color:black; margin-bottom:0px;" id="dep">loading..</p></div> </br>
+			<div  > <span style='color: red;'><i class='fas fa-map'></i> <font  color="black"></font></span></div>
+			<div><p style="color:black; margin-bottom:0px;" id="area">loading..</p></div>
+		</div>
+
+
+			<p class="card-text" style="font-size:100%; color:black; margin-bottom:0px; margin-top:10px;"> Keterangan :</p>
+
+			<div class="col-xs-12 alert alert-warning" style="margin-top:0px; background-color:#8a190a; ">
+            <div  ><span style='color: white;'> <i class="fas fa-bullhorn "></i></span></div>
+            <div><p style="color:white; margin-bottom:0px;" id="potensi9"></p></div>
+			</div>
+
+			<p class="card-text" style="font-size:100%; color:black; margin-bottom:0px; margin-top:10px;"> Saran dan Arahan dari BMKG :</p>
+
+			<div class="col-xs-12 alert alert-warning" style="margin-top:0px; background-color:orange; ">
+            <div  > <i class="fas fa-bullhorn "></i></div>
+            <div><p style="color:black; margin-bottom:0px;" id="instruction19"></p></div>
+			</div>
+     	</div>
+
+
+
+		</div>
+
+
+        <script>
+		async function getGempa2() {
+	  var timestamp = +new Date;
+//alert("Hello! I am an alert box!");
+      const api_url = 'gs://bmkg-content-inatews/datagempa.json?t=' + timestamp;
+
+	  //LOAD GEMPA
+        const response = await fetch(api_url);
+        const data5 = await response.json();
+		console.log(data5);
+	    const { latitude, longitude, info, OT, depth, ket, identifier, sent, magnitude } = data5;
+
+		var judul_rs = info.subject;
+		var pecah_judul_rs = judul_rs.split(" ");
+		var judul_rasa = pecah_judul_rs[1] +" " +pecah_judul_rs[2];
+		document.getElementById('magni9').innerText = info.magnitude;
+		document.getElementById('judul29').innerText = "INFO " + judul_rasa;
+		document.getElementById('tanggal29').innerHTML = "WAKTU GEMPABUMI : " + info.date + " " + info.time;
+		document.getElementById('timelapse29').innerHTML = "Waktu pengiriman : " + info.timesent;
+		document.getElementById('instruction19').innerHTML = info.instruction;
+		document.getElementById('potensi9').innerHTML = info.potential;
+		document.getElementById('evid9').innerHTML = "<img src='gs://bmkg-content-inatews/"+ info.shakemap +"' width='10%; border:1;'>";
+		document.getElementById('mmi').innerHTML = info.felt;
+		document.getElementById('latlon').innerHTML = info.latitude +' '+info.longitude ;
+		document.getElementById('dep').innerHTML = info.depth ;
+		document.getElementById('area').innerHTML = info.area ;
+
+
+	}
+   getGempa2();
+
+
+
+
+
+		</script>
+
+  </div>

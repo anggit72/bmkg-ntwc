@@ -1,0 +1,191 @@
+<a onClick="mapcenter(); return false;"><div class="container">
+  <div class="card2" style="padding-top:0">
+<div style="background-color:#e3e2de; margin:0;">
+    <p style="margin-top:3px; font-size:140%; padding:10px; margin-bottom:0px; color:black" align="center">::Gempa Realtime Terakhir::</p>
+	</div>
+    <div class="team" style="margin-top:0px">
+	<p class="name" style="margin-bottom:0px;">Area Indonesia  ::    Mag>1, 20 hari terakhir</p>
+	<div class="card-block" style =" height:90px;">
+			<div class="col-md-12" style="margin-left:0px; padding-left:0px;">
+			<div class="row" style="margin-left:0px; padding-left:0px;  height:100%;" >
+			    <div class="col-md-3" style="margin-left:0px;">
+				<h1 class="card-text good-review-score2 float-left" id="mag_3" style="background-color:#95dcf0; margin: 10% 0px 0px -17px; font-size:290%; font-weight: bold; color:#f24324;  height:80%;"><b>-</b></h1>
+				</div>
+				<div class="col-md-9" style="margin-left:0px;">
+				
+				<h5 class="name" id="jam_3" style="margin-top:5%;">Loading..</h5>
+				 <div  style="font-size:140%;"><img src="images/clock.png"  height="30px"><span style='color: red; display: inline-block;'><p id="lapse_3" align="left" style="margin-bottom:0px;">  Loading.. </p></span></div>
+				<p class="card-text" id= "elapseee" style="font-size:75%; color:red; margin-bottom:0px;"></p>
+				</div>
+				</div>
+			</div>
+	    </div>
+      <div class="member2" style="padding-top:0px;">
+          <div   style="font-size:100%; margin-bottom:0px;"> <p id="latlon_3" align="left" style="margin-bottom:0px;">  Loading.. </p></div>
+		  <p class="name" id="area_3" style="color:black; margin-top:5px;">Loading..</p>             
+      </div>
+          
+    </div>
+   
+  </div>
+</div>
+</a>
+<div class="container" style="margin-top:5%; height:290px;" id="test_toast" >
+
+ <div class="toast" id="t1" style= " position: absolute;" role="alert" aria-live="assertive"  aria-atomic="true" data-delay="20000">
+    <div class="toast-header" style="padding-top:20px;">
+
+      <h5><strong class="mr-auto" id="lokasi_t2" >loading</strong></h5>
+      <small class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>
+      <button type="button" class="ml-2 mb-1 close" style="margin-left:80px; float: right;" data-dismiss="toast" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+    <div class="toast-body">
+	
+       <div class="member" style="padding:0px">
+        <div class="col-md-3" style="padding-left:0px; padding-right:0px; font-size:120%;"> Mag </div>:<div class="col-md-8"  style="font-size:120%; margin-bottom:0px;"><p id="mag_t" align="left" style="margin-bottom:0px;"> Loading..</p></div>
+		<div class="col-md-3" style="padding-left:0px; padding-right:0px; margin-top:3%; font-size:120%;">Kdlmn </div>:<div class="col-md-8"  style="font-size:120%; margin-bottom:0px;"> <p id="kdlmn_t" align="left" style="margin-bottom:0px;">Loading..</p></div>
+		<div class="col-md-3" style="padding-left:0px; padding-right:0px; margin-top:3%; font-size:120%;">Waktu </div>:<div class="col-md-8"  style="font-size:120%; margin-bottom:0px;"> <p id="waktu_t" align="left" style="margin-bottom:0px;">Loading..</p></div>
+		<div class="col-md-12" style="padding-left:0px; padding-right:0px; margin-top:3%;"><div   style="font-size:130%;"> <img src="images/clock.png"  height="30px"> <span style='color: red; display: inline-block;'><p id="elapse_3" align="left" style="margin-bottom:0px;">  Loading.. </p></span></div> </div>
+		<div class="col-md-3" style="padding-left:0px; padding-right:0px; margin-top:3%; font-size:120%;">Lokasi </div>:<div class="col-md-8"  style="font-size:120%; margin-bottom:0px; padding-right:0"> <p id="lokasi_t" align="left" style="margin-bottom:0px;">Loading..</p></div>
+		<div class="col-md-3" style="padding-left:0px; padding-right:0px; margin-top:3%; font-size:120%;">Jmlh fase </div>:<div class="col-md-8"  style="font-size:120%; margin-bottom:0px;"> <p id="fase_t" align="left" style="margin-bottom:0px;">Loading..</p></div>
+		
+		<div class="col-md-3" style="padding-left:0px; padding-right:0px; margin-top:2%; font-size:120%;">Status </div>:<div class="col-md-8"  style="font-size:120%; margin-bottom:0px;"> <p id="status_t" align="left" style="margin-bottom:0px;">Loading..</p></div>
+		
+      </div>
+	  
+    </div>
+  </div>
+
+<div class="toast" id="t2" style= " position: absolute;" role="alert" aria-live="assertive" aria-atomic="true" data-animation="true" data-delay="5000">
+    <div class="toast-header" style="padding-top:20px;">
+
+      <h5><strong class="mr-auto" id="lokasi_t3" >loading</strong></h5>
+      <small class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>
+      <button type="button" class="ml-2 mb-1 close" style="margin-left:80px; float: right;" data-dismiss="toast" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+    <div class="toast-body">
+	
+       <div class="member" style="padding:0px">
+        <div class="col-md-3" style="padding-left:0px; padding-right:0px; font-size:120%;"> Mag </div>:<div class="col-md-8"  style="font-size:120%; margin-bottom:0px;"><p id="mag_t3" align="left" style="margin-bottom:0px;"> Loading..</p></div>
+		<div class="col-md-3" style="padding-left:0px; padding-right:0px; margin-top:3%; font-size:120%;">Kdlmn </div>:<div class="col-md-8"  style="font-size:120%; margin-bottom:0px;"> <p id="kdlmn_t3" align="left" style="margin-bottom:0px;">Loading..</p></div>
+		<div class="col-md-3" style="padding-left:0px; padding-right:0px; margin-top:3%; font-size:120%;">Waktu </div>:<div class="col-md-8"  style="font-size:120%; margin-bottom:0px;"> <p id="waktu_t3" align="left" style="margin-bottom:0px;">Loading..</p></div>
+		<div class="col-md-12" style="padding-left:0px; padding-right:0px; margin-top:3%;"><div   style="font-size:130%;"> <img src="images/clock.png"  height="30px"> <span style='color: red; display: inline-block;'><p id="elapse_33" align="left" style="margin-bottom:0px;">  Loading.. </p></span></div> </div>
+		
+		<div class="col-md-3" style="padding-left:0px; padding-right:0px; margin-top:3%; font-size:120%;">Lokasi </div>:<div class="col-md-8"  style="font-size:120%; margin-bottom:0px; padding-right:0"> <p id="lokasi_t33" align="left" style="margin-bottom:0px;">Loading..</p></div>
+		<div class="col-md-3" style="padding-left:0px; padding-right:0px; margin-top:3%; font-size:120%;">Jmlh fase </div>:<div class="col-md-8"  style="font-size:120%; margin-bottom:0px;"> <p id="fase_t3" align="left" style="margin-bottom:0px;">Loading..</p></div>
+		
+		<div class="col-md-3" style="padding-left:0px; padding-right:0px; margin-top:2%; font-size:120%;">Status </div>:<div class="col-md-8"  style="font-size:120%; margin-bottom:0px;"> <p id="status_t3" align="left" style="margin-bottom:0px;">Loading..</p></div>
+		
+      </div>
+	  
+    </div>
+  </div>
+
+</div>
+<div class="container" style="margin-top:3%" id="test_toast">
+<div class="card2" style="position:absolute; z-index:-5; background-color: rgba(255, 255, 255, 0.0);">
+<div class="member2">
+<span class="name" style="font-size:90%; color:yellow"><font color="orange"><u><b>Disclaimer!</b></u></font></br>
+Dalam beberapa menit pertama setelah gempabumi, parameter gempabumi dapat berubah dan boleh jadi belum akurat, kecuali telah dianalisis ulang oleh ahli seismologi. </span>
+</div>
+</div>
+</div>
+
+
+<div class="container" style="margin-top:43%; " id="test_toast" >
+
+<div class="card2" style="background-color: rgba(255, 255, 255, 0.6);">
+    <p style="margin-top:3px; margin-bottom:0px; font-size:120%; color:black" align="center">::Legenda::</p>
+	<hr style="border: 2px solid white; margin-top:0px;">
+	<small class="text-muted"><b><font color="black">Magnitudo:</font></b></small>
+<div class="row" style="margin-left:5%; margin-bottom:0px; padding-right:0px;">
+
+<div class="col-md-1" style="padding:0; margin:0; background-color: rgba(255, 255, 255, 0);">
+<div class="legend" style="padding:0; margin:0;">
+<span style="padding:0; margin:0;"><i class="circlepadding" style="width: 6px; height: 6px; background: lightgrey; border-width: thin; border-radius: 50%; padding:0; margin-top:8; border-style: solid; border-color: black;"></i></span><span style="padding:0; margin:0; font-size:80%;"><p class="pcir">1</p></span>
+</div>
+</div>
+
+<div class="col-md-1" style="padding:0; margin:0; background-color: rgba(255, 255, 255, 0);">
+<div class="legend" style="padding:0; margin:0;">
+<span style="padding:0; margin:0;"><i class="circlepadding" style="width: 8px; height: 8px; background: lightgrey; border-width: thin; border-radius: 50%; padding:0; margin-top:8; border-style: solid; border-color: black;"></i></span><span style="padding:0; margin:0; font-size:80%;"><p class="pcir">2</p></span>
+</div>
+</div>
+
+<div class="col-md-1" style="padding:0; margin:0; background-color: rgba(255, 255, 255, 0);">
+<div class="legend" style="padding:0; margin:0;">
+<span style="padding:0; margin:0;"><i class="circlepadding" style="width: 10px; height: 10px; background: lightgrey; border-width: thin; border-radius: 50%; padding:0; margin-top:8; border-style: solid; border-color: black;"></i></span><span style="padding:0; margin:0; font-size:80%;"><p class="pcir">3</p></span>
+</div>
+</div>
+
+<div class="col-md-1" style="padding:0; margin:0; background-color: rgba(255, 255, 255, 0);">
+<div class="legend" style="padding:0; margin:0;">
+<span style="padding:0; margin:0;"><i class="circlepadding" style="width: 14px; height: 14px; background: lightgrey; border-width: thin; border-radius: 50%; padding:0; margin-top:6; border-style: solid; border-color: black;"></i></span><span style="padding:0; margin:0; font-size:80%;"><p class="pcir" >4</p></span>
+</div>
+</div>
+
+<div class="col-md-2" style="padding:0; margin:0; background-color: rgba(255, 255, 255, 0); width:70%;">
+<div class="legend" style="padding:0 0 0 10; margin:0; ">
+<span style="padding:0; margin:0;"><i class="circlepadding" style="width: 16px; height: 16px; background: lightgrey; border-width: thin; border-radius: 50%; padding:0; margin-top:3; border-style: solid; border-color: black;"></i></span><span style="padding:0; margin:0; font-size:80%;"><p class="pcir" >5</p></span>
+</div>
+</div>
+
+<div class="col-md-2" style="padding:0; margin:0 0 0 0; background-color: rgba(255, 255, 255, 0);">
+<div class="legend" style="padding:0; margin:0;">
+<span style="padding:0; margin:0;"><i class="circlepadding" style="width: 20px; height: 20px; background: lightgrey; border-width: thin; border-radius: 50%; padding:0; margin-top:0; border-style: solid; border-color: black;"></i></span><span style="padding:0; margin:0; font-size:100%;"><p class="pcir" >6</p></span>
+</div>
+</div>
+
+<div class="col-md-2" style="padding:0; margin:0 0 0 -2; background-color: rgba(255, 255, 255, 0);">
+<div class="legend" style="padding:0; margin:0;">
+<span style="padding:0; margin:0;"><i class="circlepadding" style="width: 26px; height: 26px; background: lightgrey; border-width: thin; border-radius: 50%; padding:0; margin-top:-3; border-style: solid; border-color: black;"></i></span><span style="padding:0; margin:0; font-size:100%;"><p class="pcir" >7</p></span>
+</div>
+</div>
+
+<div class="col-lg-2" style=" padding:0; margin:0 0 0 -10px; background-color: rgba(255, 255, 255, 0);">
+<div class="legend" style="padding:0; margin:0; width:200%; ">
+<span style="padding:0; margin:0;"><i class="circlepadding" style="width: 32px; height: 32px; background: lightgrey; border-width: thin; border-radius: 50%; padding:0; margin-top:-2; border-style: solid;  border-color: black; "></i></span><span style="padding:0; margin:0; font-size:100%;"><p class="pcir" >8+</p></span>
+</div>
+</div>
+
+</div>
+
+
+
+<small class="text-muted"><b><font color="black">Kedalaman (Km):</font></b></small>
+<div class="row" style="margin-left:2%; margin-bottom:20px;">
+
+<div class="foo red"></div><div><=50</div>
+<div class="foo orange"></div><div> <=100</div>
+<div class="foo yellow"></div><div> <=250</div>
+<div class="foo green"></div><div> <=600</div>
+<div class="foo blue"></div><div> >600</div>
+
+</div>
+
+</div>
+ 
+</div>
+
+
+<div class="container" style="margin-top:-3%">
+  <div class="card2" style="background-color: rgba(255, 255, 255, 0.6);">
+   
+	<div class="card-block" style =" height:60px; margin:0;">
+			
+			<div class="row" style="margin-left:0px; padding-left:0px;  height:100%;" >
+			    <div class="col-md-2" style="margin-left:0px; padding:0;"><div class="fill" style=" height:60px"><img src="images/logo-bmkg2.png"  height="60px"></div></div>
+				<div class="col-md-2" style="margin-left:0px; pading-top:15%;"> <div id="koneksi" style="margin-top:35%; font-size:230%;"><span style="color: red;"><i class="glyphicon glyphicon-transfer"></i></span></div></div>
+				<div class="col-md-3" style="margin-left:0px;  padding:0;"><div class="fill" style=" height:60px"><img src="images/logo-wrs2.png"  height="60px"></div></div>
+				<div class="col-md-5" style="margin-left:0px; padding:0 0 0 5px;"><div id="datetime" style="font-size: 120%; color:blue; text-align: center;"></div></div>
+				
+				</div>
+			</div>
+	
+  </div>
+</div>
+	<script src="js/jquery.side.js"></script> 

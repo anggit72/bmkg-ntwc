@@ -1,0 +1,85 @@
+<div class="row" style="margin: 0 0 0 0; background-color:white;">
+  <div class="col-md-2" style="margin: 0 0 0 0; padding: 0 0 0 0; background-color:#bd2109;">
+  <div class="card-block">
+<h1  id="magni2" style="margin: 0 10px 0px 10px; font-size:480%; font-weight: bold; color:white; text-align:center"></h1>
+				<p align="center" style="margin: 0px 10px 0px 10px; font-size:100%; color:white; text-align:center"> Magnitudo</p>
+  </div>
+  </div>
+  <div class="col-md-10" style="margin: 0 0 0 0; padding: 0 0 0 10px; background-color:#f0c22e;">
+        <div class="card-block">
+           <h4 class="card-title" align="left" style="margin-bottom:0px; font-family: 'Helvetica Neue', sans-serif;  font-weight: bold; font-size:250%; text-transform:uppercase;  margin-bottom:0px;" id="judul22"></h4>
+            <p class="card-text" id= "tanggal22" style="font-size:150%; margin-bottom:0px; margin-top:-10px; "></p>
+			<p class="card-text" id= "timelapse22" style="font-size:120%; color:#a61c07; margin-bottom:0px;"></p>
+         </div>
+
+    </div>
+	<div  class="col-md-12" style=" background-color:none; position: absolute; float:right!important; z-index: 500;">
+		 <div class="q">
+	 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+    <img src="../file_modal/Logo-BMKG-new.png" align="right" style="z-index: 500; margin-top:10px; margin-right:0px;   position: relative;    width:8%;    display: block; "/>
+</div>
+	 </div>
+
+
+
+  <link rel="stylesheet" href="css/melki51.css">
+   <div  class="col-md-12" >
+   <div class="row">
+    <div  class="col-md-2" >
+
+	<p  align="center" style="margin-top:10%"><span style='color: orange; font-size:500%;'><i class='fa fa-exclamation-triangle faa-pulse animated fa-10x'></i></span></p>
+
+	</div>
+   <div  class="col-md-10" >
+   <div class="alert alert-success" style="margin-top:20px;  padding: 15px 5px 15px 5px;">
+ <p align="center" id="potensi2" style="font-size:150%;  font-family: 'Helvetica Neue', sans-serif; color:black; font-weight: bold; text-transform:uppercase; margin-top:0px; margin-bottom:0px;"></p>.
+  </div>
+ </div>
+ </div>
+</div>
+
+
+		 <div  class="col-md-12">
+		 <div class="card-content" style="margin-top:5px; background-color:#8a190a; padding: 15px 0 15px 0;">
+            <p align="center" id="" style="font-size:500%; color:#e3a20b; font-weight: bold; text-transform:uppercase; margin-top:10px; margin-bottom:10px;"> <span style="animation: blink 2s linear infinite;">B E R A K H I R</span></p>
+        </div>
+		 </div>
+		   <div  class="col-md-12" >
+		<p align="center" id="" style="font-size:130%; font-family: 'Helvetica Neue', sans-serif; color:black; text-transform:uppercase; margin-top:10px; font-weight: bold; margin-bottom:10px;"> UNTUK SELURUH WILAYAH INDONESIA.</p>
+</div>
+   </div>
+
+
+
+        <script>
+		async function getGempa() {
+	  var timestamp = +new Date;
+//alert("Hello! I am an alert box!");
+      const api_url = 'gs://bmkg-content-inatews/datagempa.json?t=' + timestamp;
+
+	  //LOAD GEMPA
+        const response = await fetch(api_url);
+        const data5 = await response.json();
+		console.log(data5);
+	    const { latitude, longitude, info, OT, depth, ket, identifier, sent, magnitude } = data5;
+		var gemp =info.headline;
+		var pecah_gemp = gemp.split("telah");
+		var gemp2 = pecah_gemp[0];
+		console.log(gemp2);
+		document.getElementById('magni2').innerText = info.magnitude;
+		document.getElementById('judul22').innerText = info.subject;
+		document.getElementById('tanggal22').innerHTML = "WAKTU GEMPABUMI : " + info.date + " " + info.time;
+		document.getElementById('timelapse22').innerHTML = "Waktu pengiriman : " + info.timesent;
+		document.getElementById('potensi2').innerHTML = gemp2 +" :";
+
+
+	}
+   getGempa();
+	var $modalDialog = $("#modal2");
+	setTimeout(function() {
+		$modalDialog.modal('hide');
+		}, 600000);
+		</script>
+  </div>

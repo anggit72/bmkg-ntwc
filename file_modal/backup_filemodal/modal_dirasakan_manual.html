@@ -1,0 +1,458 @@
+
+
+<style>
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.title{
+  margin-top: 50px;
+  h1{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    text-transform: uppercase;
+    color: #d63031;
+    
+    span{
+      display: block;
+      color: darken(#d63031, 40%);
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+/*Carousel Gallery*/
+.carousel-gallery{
+	margin: 50px 0;
+  padding: 0 30px;
+	.swiper-slide{
+		a{
+			display: block;
+			width: 100%;
+			border-radius: 4px;
+			overflow: hidden;
+			position: relative;
+
+			-webkit-box-shadow: 3px 2px 20px 0px rgba(0,0,0, .2);
+      -moz-box-shadow: 3px 2px 20px 0px rgba(0,0,0, .2);
+      box-shadow: 3px 2px 20px 0px rgba(0,0,0, .2);
+
+			&:hover{
+				.image{
+					.overlay{opacity: 1}
+				}
+			}
+
+			.image{
+				width: 90%;
+				height: 100%;
+				background-size: cover;
+				background-position: center center;
+				.overlay{
+					width: 90%;
+					height: 100%;
+					background-color: rgba(20,20,20, .8);
+					text-align: center;
+					opacity: 0;
+					
+					-webkit-transition: all .2s linear; 
+          -o-transition: all .2s linear; 
+          transition: all .2s linear;
+
+					em{
+						color: #fff;
+						font-size: 26px;
+						position: relative;
+            top: 50%; 
+            -webkit-transform: translateY(-50%); 
+            -ms-transform: translateY(-50%); 
+            -o-transform: translateY(-50%); 
+            transform: translateY(-50%);
+            display: inline-block;
+					}
+				}
+			}
+		}
+	}
+	.swiper-pagination{
+		position: relative;
+		bottom: auto;
+		text-align: center;
+		margin-top: 25px;
+
+		.swiper-pagination-bullet{
+			-webkit-transition: all .2s linear; 
+      -o-transition: all .2s linear; 
+      transition: all .2s linear;
+
+			&:hover{
+				opacity: .7;
+			}
+
+			&.swiper-pagination-bullet-active{
+				background-color: #d63031;
+				transform: scale(1.1, 1.1)
+			}
+		}
+	}
+}
+/*# Carousel Gallery*/
+
+.plugins{
+  text-align: center;
+  
+  h3{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    text-transform: uppercase;
+    color: #111;
+  }
+  
+  a{
+    display: inline-block;
+    font-family: Arial;
+    color: #777;
+    font-size: 14px;
+    margin: 10px;
+    transition: all .2s linear;
+    
+    &:hover{color: #d63031}
+  }
+}
+</style>
+<div class="row" style="margin: 0 0 0 0; background-color:white;">
+  
+ <div class="col-md-2" style="margin: 0 0 0 0; padding: 0 0 0 0; background-color:#bd2109;">
+  <div class="card-block">
+             <h1 align="center" class="card-text good-review-score float-left" id="magni8" style="margin: 0 10px 0 0; font-size:6em; font-weight: bold;"></h1>
+  </div>
+  </div>
+  <div class="col-md-10" style="margin: 0 0 0 0; padding: 0 0 0 10px; background-color:#f0c22e;">
+        <div class="card-block">
+           <h4 class="card-title" align="left" style="margin-bottom:0px; font-family: 'Helvetica Neue', sans-serif;  font-weight: bold; font-size:250%; text-transform:uppercase;  margin-bottom:0px;" id="judul28"></h4>
+            <p class="card-text" id= "tanggal28" style="font-size:150%; margin-bottom:0px; margin-top:-10px; "></p>
+			<p class="card-text" id= "timelapse28" style="font-size:120%; color:#a61c07; margin-bottom:0px;"></p>
+         </div>
+       
+    </div>
+	<div  class="col-md-12" style=" background-color:none; position: absolute; float:right!important; z-index: 500;">
+		 <div class="q">
+	 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+    <img src="https://cdn.bmkg.go.id/Web/Logo-BMKG-new.png" align="right" style="z-index: 500; margin-top:-60px; margin-right:0px;   position: relative;    width:8%;    display: block; "/>
+</div>
+	 </div>
+	 
+  
+    <div  class="col-md-4" style="margin: 5px 0 5px 0px; padding: 0px 0 0px 0px;">
+<div  class="container" style="margin: 5px 0 5px 0px; padding: 0px 0 0px 0px;">
+	<div  class="row" style="margin: 5px 0 5px 0px; padding: 0px 0 0px 0px;">
+    <div class="container-fostrap" style=" width:100%; margin: 10px 0 5px 0px; padding: 0px 0 0px 0px;" >
+      
+        <div class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12">
+					
+                        <div class="card">
+						
+						 <h5 class="heading" style="margin: 20px 0 5px 10px; font-size:90%; color:black;">
+						 
+                Peta Guncangan (Shakemap) </br>Berdasarkan Pemodelan
+            </h5>
+                            <a id= "evid8" class="img-card2"  href="#">
+                           
+                          </a>
+                            <div class="card-content" style="margin-top:0px; background-color:#8a190a; padding: 15px 0 15px 0;">
+                                
+                                <p align="center" id="potensi8" style="font-size:90%; color:white; text-transform:uppercase; margin-top:10px; margin-bottom:10px;">
+                                </p>
+                            </div>
+                        </div>
+						
+						
+						
+                    </div>
+					</div>
+					</div>
+					</div>
+					</div>
+	</div>
+		</div>
+
+
+    </div>
+
+    <div class="col-md-8" style="margin: 0 0 0 0; padding: 5px 5px 5px 0px;">
+	<p class="card-text" style="font-size:100%; color:black; margin-bottom:0px; margin-top:10px;"> Daerah yang merasakan getaran gempabumi dalam skala MMI :</p>
+	<div class="pane">
+     
+	  <table id="div188" class="table table-bordered" style="margin-top:0px;">
+	  	  </table>
+	</div>
+  
+      <p class="card-text" style="font-size:100%; color:black; margin-bottom:0px; margin-top:10px;"> Saran dan Arahan Status Peringatan :</p>
+	 <div class="card text-white" style="background:none; border:none; margin-top:5px;">
+	
+		
+		<div class="col-xs-12 alert alert-warning" style="margin-bottom:0px; background-color:orange; ">
+            <div class="glyphicon glyphicon-exclamation-sign" > <i class="fas fa-bullhorn "></i></div>
+            <div><p style="color:black; margin-bottom:0px;" id="instruction18"></p></div> 
+		</div>
+		
+		 </div>
+		 
+		
+	
+		
+		<div class="col-md-12" style="margin:0 0 0 0; padding:0 0 0 0;">
+
+<script>
+$(function(){
+  
+    var swiper = new Swiper('.carousel-gallery .swiper-container', {
+      effect: 'slide',
+      speed: 900,
+      slidesPerView: 5,
+      spaceBetween: 20,
+      simulateTouch: true,
+      autoplay: {
+        delay: 5000,
+        stopOnLastSlide: false,
+        disableOnInteraction: false
+      },
+      pagination: {
+        el: '.carousel-gallery .swiper-pagination',
+        clickable: true
+      },
+      breakpoints: {
+        // when window width is <= 320px
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 5
+        },
+        // when window width is <= 480px
+        425: {
+          slidesPerView: 2,
+          spaceBetween: 10
+        },
+        // when window width is <= 640px
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 20
+        }
+      }
+    }); /*http://idangero.us/swiper/api/*/
+  
+    
+  
+});
+</script>
+ <p class="card-text" style="font-size:100%; color:black; margin-bottom:0px; margin-top:5px;"> Keterangan Skala MMI (Modified Mercally Intensity) :</p>
+<!--Carousel Gallery-->
+<div class="carousel-gallery" style="margin-left:0px; padding-left:0px; margin-top:10px; margin-bottom:40px;">
+    <div class="swiper-container" style="height:180px;">
+        <div class="swiper-wrapper">
+           <div class="swiper-slide">
+                <a href="/display/img_mmi/2.jpg" data-fancybox="gallery">
+                     <div class="image" style="height:200px; width:400px; background-image: url(http://pgt.bmkg.go.id/display/img_mmi/tumb2.jpg); background-repeat: no-repeat; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; height: 180px;">
+                        <div class="overlay">
+                            <em class="mdi mdi-magnify-plus"> </em>
+							<p style="color:red; margin-top:-25px; margin-left:20px; font-weight:bold; font-size:100%;" ></p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="swiper-slide" style="margin-left:30px;">
+                <a href="/display/img_mmi/3.jpg" data-fancybox="gallery">
+                     <div class="image" style="height:200px; width:400px; background-image: url(http://pgt.bmkg.go.id/display/img_mmi/tumb3.jpg); background-repeat: no-repeat; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; height: 180px;">
+                        <div class="overlay">
+                            <em class="mdi mdi-magnify-plus"></em>
+							<p style="color:red; margin-top:-25px; margin-left:20px; font-weight:bold; font-size:100%;" ></p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+             <div class="swiper-slide" style="margin-left:30px;">
+                <a href="/display/img_mmi/4.jpg" data-fancybox="gallery">
+                     <div class="image" style="height:200px; width:400px; background-image: url(http://pgt.bmkg.go.id/display/img_mmi/tumb4.jpg); background-repeat: no-repeat; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; height: 180px;">
+                        <div class="overlay">
+                            <em class="mdi mdi-magnify-plus"></em>
+							<p style="color:red; margin-top:-25px; margin-left:20px; font-weight:bold; font-size:100%;" ></p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="swiper-slide" style="margin-left:30px;">
+                <a href="/display/img_mmi/5.jpg" data-fancybox="gallery">
+                     <div class="image" style="height:200px; width:400px; background-image: url(http://pgt.bmkg.go.id/display/img_mmi/tumb5.jpg); background-repeat: no-repeat; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; height: 180px;">
+                        <div class="overlay">
+                            <em class="mdi mdi-magnify-plus"></em>
+							<p style="color:red; margin-top:-25px; margin-left:20px; font-weight:bold; font-size:100%;" ></p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+             <div class="swiper-slide" style="margin-left:30px;">
+                <a href="/display/img_mmi/6.jpg" data-fancybox="gallery">
+                     <div class="image" style="height:200px; width:400px; background-image: url(http://pgt.bmkg.go.id/display/img_mmi/tumb6.jpg); background-repeat: no-repeat; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; height: 180px;">
+                        <div class="overlay">
+                            <em class="mdi mdi-magnify-plus"></em>
+							<p style="color:red; margin-top:-25px; margin-left:20px; font-weight:bold; font-size:100%;" ></p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="swiper-slide" style="margin-left:30px;">
+                <a href="/display/img_mmi/7.jpg" data-fancybox="gallery">
+                     <div class="image" style="height:200px; width:400px; background-image: url(http://pgt.bmkg.go.id/display/img_mmi/tumb7.jpg); background-repeat: no-repeat; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; height: 180px;">
+                        <div class="overlay">
+                            <em class="mdi mdi-magnify-plus"></em>
+							<p style="color:red; margin-top:-25px; margin-left:20px; font-weight:bold; font-size:100%;" ></p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+			 <div class="swiper-slide" style="margin-left:30px;">
+                <a href="/display/img_mmi/8.jpg" data-fancybox="gallery">
+                     <div class="image" style="height:200px; width:400px; background-image: url(http://pgt.bmkg.go.id/display/img_mmi/tumb8.jpg); background-repeat: no-repeat; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; height: 180px;">
+                        <div class="overlay">
+                            <em class="mdi mdi-magnify-plus"></em>
+							<p style="color:red; margin-top:-25px; margin-left:20px; font-weight:bold; font-size:100%;" ></p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+			 <div class="swiper-slide" style="margin-left:30px;">
+                <a href="/display/img_mmi/9.jpg" data-fancybox="gallery">
+                     <div class="image" style="height:200px; width:400px; background-image: url(http://pgt.bmkg.go.id/display/img_mmi/tumb9.jpg); background-repeat: no-repeat; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; height: 180px;">
+                        <div class="overlay">
+                            <em class="mdi mdi-magnify-plus"></em>
+							<p style="color:red; margin-top:-25px; margin-left:20px; font-weight:bold; font-size:100%;" ></p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+			<div class="swiper-slide" style="margin-left:30px;">
+                <a href="/display/img_mmi/10.jpg" data-fancybox="gallery">
+                     <div class="image" style="height:200px; width:400px; background-image: url(http://pgt.bmkg.go.id/display/img_mmi/tumb10.jpg); background-repeat: no-repeat; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; height: 180px;">
+                        <div class="overlay">
+                            <em class="mdi mdi-magnify-plus"></em>
+							<p style="color:red; margin-top:-25px; margin-left:20px; font-weight:bold; font-size:100%;" ></p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+       
+    </div>
+</div>
+<!--#Carousel Gallery-->
+
+
+ 
+     <p align="center" class="card-text" style="font-size:100%; color:black; margin-bottom:0px; margin-top:-30px;"> Klik pada gambar untuk memperbesar</p>
+		</div>
+		
+		
+		 
+		</div>
+		 
+	
+        <script>
+		async function getGempa89() { 
+	  var timestamp = +new Date;
+//alert("Hello! I am an alert box!");
+     const api_url = 'http://172.19.3.53/display/datagempa/datagempa.json?t=' + timestamp;
+      //const api_url = 'http://202.90.199.197/datagempa/datagempa.json?t=' + timestamp;
+		
+	  //LOAD GEMPA
+        const response = await fetch(api_url);
+        const data5 = await response.json();
+		console.log(data5);
+	    const { latitude, longitude, info, OT, depth, ket, identifier, sent, magnitude } = data5;
+		
+		var judul_rs = info.subject;
+		var pecah_judul_rs = judul_rs.split(" ");
+		var judul_rasa = pecah_judul_rs[1] +" " +pecah_judul_rs[2];
+		document.getElementById('magni8').innerText = info.magnitude;
+		document.getElementById('judul28').innerText = "INFO " + judul_rasa;
+		document.getElementById('tanggal28').innerHTML = "WAKTU GEMPABUMI : " + info.date + " " + info.time;
+		document.getElementById('timelapse28').innerHTML = "Waktu pengiriman : " + info.timesent;
+		document.getElementById('instruction18').innerHTML = info.instruction;
+		document.getElementById('potensi8').innerHTML = info.potential;
+		document.getElementById('evid8').innerHTML = "<img src='https://bmkg-content-inatews.storage.googleapis.com/"+ info.shakemap +"' width='10%; border:1;'>";
+		//document.getElementById('mmi').innerHTML = "<img src='img_mmi/2.png' border:1;'>";
+		               
+      var str = info.felt;
+	  console.log(str);
+var wzarea3 = str.split(',');
+	 //START TABEL   
+var tbl=$("<table/>").attr("id","mytable2");
+$("#div188").append(tbl);
+var judul= " <tr bgcolor='green'>  <th>PROVINSI/KOTA/KABUPATEN</th> <th> SKALA MMI</th> </tr>";
+ $("#mytable2").append(judul); 
+ if(wzarea3.length){
+for(var i=0;i< wzarea3.length;i++)
+{
+	
+	var mmi2 = wzarea3[i].split(" ");
+	var mmi3 = mmi2[0];
+	var kota = mmi2[1];
+	var tr="<tr>";
+    var td1="<td>"+kota+"</td>";
+	if(mmi3 == "I"){
+		 var td3="<td align='center' bgcolor='white'>"+mmi3+"</td></tr>";
+	}else if(mmi3 == "II"){
+		var td3="<td align='center' bgcolor='#7fe3c8'>"+mmi3+"</td></tr>";
+	}else if(mmi3 == "III"){
+		var td3="<td align='center' bgcolor='#7fe3c8'>"+mmi3+"</td></tr>";
+	}else if(mmi3 == "IV"){
+		var td3="<td align='center' bgcolor='#7fe3c8'>"+mmi3+"</td></tr>";
+	}else if(mmi3 == "V"){
+		var td3="<td align='center' bgcolor='#e4ed3e'>"+mmi3+"</td></tr>";
+	}else if(mmi3 == "VI"){
+		var td3="<td align='center' bgcolor='#edbb3e'>"+mmi3+"</td></tr>";
+	}else if(mmi3 == "VII"){
+		var td3="<td align='center' bgcolor='#eb8f2d'>"+mmi3+"</td></tr>";
+	}else if(mmi3 == "VIII"){
+		var td3="<td align='center' bgcolor='#db541a'>"+mmi3+"</td></tr>";
+	}else if(mmi3 == "IX"){
+		var td3="<td align='center' bgcolor='#db3012'>"+mmi3+"</td></tr>";
+	}
+    
+    
+   $("#mytable2").append(tr+td1+td2+td3); 
+}
+ }else{
+	 var tr="<tr>";
+    var td1="<td>"+wzarea3["province"]+"</td>";
+    var td2="<td>"+wzarea3["district"]+"</td>";
+	if(wzarea3["level"] == "AWAS"){
+		 var td3="<td bgcolor='red'>"+wzarea3["level"]+"</td></tr>";
+	}else if(wzarea3["level"] == "SIAGA"){
+		var td3="<td bgcolor='orange'>"+wzarea3["level"]+"</td></tr>";
+	}else if(wzarea3["level"] == "WASPADA"){
+		var td3="<td bgcolor='yellow'>"+wzarea3["level"]+"</td></tr>";
+	}
+	$("#mytable2").append(tr+td1+td2+td3); 
+ }
+
+	}
+   getGempa89();
+	
+  
+
+
+  
+		</script>
+
+  </div>

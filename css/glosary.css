@@ -1,0 +1,38 @@
+#melki {font-family:Roboto, sans-serif; font-size:12px;} 
+label  {display:block;}
+input[type='text'] {width:100%; font-size:10px; font-size:1.5em; padding:5px 10px; }
+.sticky {position:sticky; top:10px;}
+h3 {margin-top:25px;}
+
+.alphabet {display:block; width: 100%;}
+.alphabet button {
+  font: inherit;
+  
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  width:40px;
+  height:40px;
+  line-height:40px;
+  font-size:20px;
+  margin: 0 10px 10px 0;
+  border:1px #000 solid;
+  background: #EEE;
+  padding:0;
+  box-shadow:0;
+  transition:all 0.3s ease-in-out;
+  outline:0;
+}
+.alphabet:focus {outline:0;}
+.alphabet button:hover {background-color:#FFF; font-weight:bold;} 
+.alphabet button.active {background-color:#444; font-weight:bold; color:#FFF; box-shadow:0px 0px 0px 2px #FFF inset; }
+
+.glossario {display:block; width:100%; clear:both;}
+.glossario .letter {display:none; width:100%; clear:both; text-align:justify; padding-bottom:10px;}
+.glossario .letter.active {display:block;}
+.glossario h3 {font-size:16px; font-weight:500; text-transform:uppercase; margin-bottom:0px;}
+.glossario h3.found {font-weight:bold;}
+.glossario span.found {background-color:red;}
+
+

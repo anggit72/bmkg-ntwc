@@ -1,0 +1,161 @@
+<div class="row" style="margin: 0 0 0 0; background-color:white;">
+
+ <div class="col-md-2" style="margin: 0 0 0 0; padding: 0 0 0 0; background-color:#bd2109;">
+  <div class="card-block">
+             <h1  id="magni" style="margin: 0 10px 0px 10px; font-size:480%; font-weight: bold; color:white; text-align:center"></h1>
+				<p align="center" style="margin: 0px 10px 0px 10px; font-size:100%; color:white; text-align:center"> Magnitudo</p>
+  </div>
+  </div>
+  <div class="col-md-10" style="margin: 0 0 0 0; padding: 0 0 0 10px; background-color:#f0c22e;">
+        <div class="card-block">
+           <h4 class="card-title" align="left" style="margin-bottom:0px; font-family: 'Helvetica Neue', sans-serif;  font-weight: bold; font-size:250%; text-transform:uppercase;  margin-bottom:0px;" id="judul2"></h4>
+            <p class="card-text" id= "tanggal2" style="font-size:150%; margin-bottom:0px; margin-top:-10px; "></p>
+			<p class="card-text" id= "timelapse2" style="font-size:120%; color:#a61c07; margin-bottom:0px;"></p>
+         </div>
+
+    </div>
+	<div  class="col-md-12" style=" background-color:none; position: absolute; float:right!important; z-index: 500;">
+		 <div class="q">
+	 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+    <img src="../file_modal/Logo-BMKG-new.png" align="right" style="z-index: 500; margin-top:10px; margin-right:0px;   position: relative;    width:8%;    display: block;"/>
+</div>
+	 </div>
+
+
+    <div  class="col-md-6" style="margin: 5px 0 5px 0px; padding: 0px 0 0px 0px;">
+<div  class="container" style="margin: 5px 0 5px 0px; padding: 0px 0 0px 0px;">
+	<div  class="row" style="margin: 5px 0 5px 0px; padding: 0px 0 0px 0px;">
+    <div class="container-fostrap" style=" width:100%; margin: 10px 0 5px 0px; padding: 0px 0 0px 0px;" >
+
+        <div class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12">
+
+                        <div class="card">
+
+						 <h5 class="heading" style="margin: 25px 0 -20px 0px; font-size:100%;">
+
+                Peta Estimasi Tsunami Berdasarkan Pemodelan
+            </h5>
+                            <a id= "evid" class="img-card" href="#">
+
+                          </a>
+                            <div class="card-content" style="margin-top:20px; background-color:#8a190a; padding: 15px 5px 15px 5px;">
+
+                                <p align="center" id="potensi" style="font-size:130%; color:white; text-transform:uppercase; margin-top:10px; margin-bottom:10px;">
+                                </p>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+					</div>
+					</div>
+					</div>
+					</div>
+	</div>
+		</div>
+
+
+    </div>
+
+    <div class="col-md-6" style="margin: 0 0 0 0; padding: 5px 5px 5px 0px;">
+	<p class="card-text" style="font-size:100%; color:black; margin-bottom:0px; margin-top:10px;"> Daerah yang berpotensi tsunami berdasarkan pemodelan :</p>
+	<div class="table-responsive" style="width:100%;">
+
+	  <table id="div2" class="table table-bordered" width="90%" style="margin-top:0px;">
+	  	  </table>
+	</div>
+
+      <p class="card-text" style="font-size:100%; color:black; margin-bottom:0px; margin-top:10px;"> Saran dan Arahan Status Peringatan :</p>
+	 <div class="card text-white" style="background:none; border:none; margin-top:5px;">
+
+		<div class="col-xs-12 alert alert-danger" style="margin-bottom:0px; background-color:#e04c16;">
+            <div > <i class="fas fa-bullhorn"></i></div>
+            <div > <p style="color:black; font-size:90%; margin-bottom:0px;" id="instruction1"></p></div>
+		</div>
+		<div class="col-xs-12 alert alert-warning" style="margin-bottom:0px; background-color:orange; ">
+            <div  > <i class="fas fa-bullhorn "></i></div>
+            <div><p style="color:black; font-size:90%; margin-bottom:0px;" id="instruction2"></p></div>
+		</div>
+		<div class="col-xs-12 alert alert-default" style="margin-bottom:0px; background-color:yellow;">
+            <div > <i class="fas fa-bullhorn"></i></div>
+            <div><p style="color:black; font-size:90%; margin-bottom:0px;" id="instruction3"></p></div>
+		</div>
+		 </div>
+        <script>
+		async function getGempa() {
+	  var timestamp = +new Date;
+//alert("Hello! I am an alert box!");
+      const api_url = 'gs://bmkg-content-inatews/datagempa.json.json?t=' + timestamp;
+
+	  //LOAD GEMPA
+        const response = await fetch(api_url);
+        const data5 = await response.json();
+		console.log(data5);
+	    const { latitude, longitude, info, OT, depth, ket, identifier, sent, magnitude } = data5;
+		document.getElementById('magni').innerText = info.magnitude;
+		document.getElementById('judul2').innerText = info.subject;
+		document.getElementById('tanggal2').innerHTML = "WAKTU GEMPABUMI : " + info.date + " " + info.time;
+		document.getElementById('timelapse2').innerHTML = "Waktu pengiriman : " + info.timesent;
+		document.getElementById('instruction1').innerHTML = info.instruction1;
+		document.getElementById('instruction2').innerHTML = info.instruction2;
+		document.getElementById('instruction3').innerHTML = info.instruction3;
+		document.getElementById('potensi').innerHTML = info.potential;
+		document.getElementById('evid').innerHTML = "<img src='gs://bmkg-content-inatews/"+ info.eventid + ".gif' width='100%'>";
+
+       var wzarea3 = info.wzarea;
+	   console.log(info.event.length);
+	 //START TABEL
+var tbl=$("<table/>").attr("id","mytable2");
+$("#div2").append(tbl);
+var judul= " <tr bgcolor='green'>  <th>PROVINSI</th>  <th>KOTA/KABUPATEN</th>   <th>STATUS PERINGATAN</th> <th>ESTIMASI TIBA</th></tr>";
+ $("#mytable2").append(judul);
+ var jum = 0;
+ if(wzarea3.length){
+	for(var i=0;i< wzarea3.length;i++)
+{
+    var tr="<tr>";
+    var td1="<td>"+wzarea3[i]["province"]+"</td>";
+    var td2="<td>"+wzarea3[i]["district"]+"</td>";
+	if(wzarea3[i]["level"] == "AWAS"){
+		 var td3="<td bgcolor='red'>"+wzarea3[i]["level"]+"</td>";
+	}else if(wzarea3[i]["level"] == "SIAGA"){
+		var td3="<td bgcolor='orange'>"+wzarea3[i]["level"]+"</td>";
+	}else if(wzarea3[i]["level"] == "WASPADA"){
+		var td3="<td bgcolor='yellow'>"+wzarea3[i]["level"]+"</td>";
+	}
+    var td4="<td>"+wzarea3[i]["date"]+" "+wzarea3[i]["time"]+"</td></tr>";
+
+    $("#mytable2").append(tr+td1+td2+td3+td4);
+}
+ }else{
+	var tr="<tr>";
+    var td1="<td>"+wzarea3["province"]+"</td>";
+    var td2="<td>"+wzarea3["district"]+"</td>";
+	if(wzarea3["level"] == "AWAS"){
+		 var td3="<td bgcolor='red'>"+wzarea3["level"]+"</td>";
+	}else if(wzarea3["level"] == "SIAGA"){
+		var td3="<td bgcolor='orange'>"+wzarea3["level"]+"</td>";
+	}else if(wzarea3["level"] == "WASPADA"){
+		var td3="<td bgcolor='yellow'>"+wzarea3["level"]+"</td>";
+	}
+
+    var td4="<td>"+wzarea3["date"]+" "+wzarea3["time"]+"</td></tr>";
+   $("#mytable2").append(tr+td1+td2+td3+td4);
+ }
+ console.log(jum);
+
+
+	}
+   getGempa();
+
+
+
+		</script>
+    </div>
+  </div>
